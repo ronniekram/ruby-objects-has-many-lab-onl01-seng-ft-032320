@@ -3,7 +3,6 @@ class Song
   @@all = []
   
   def initialize(title)
-    @name = name
     @title = title 
     save
   end 
