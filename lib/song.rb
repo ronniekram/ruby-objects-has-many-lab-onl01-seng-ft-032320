@@ -2,22 +2,9 @@ class Song
   attr_accessor :name, :artist
   @@all = []
   
-  def initialize 
+  def initialize(name) 
     @name = name 
     @artist = artist 
   end 
   
-  def add_song_by_name(song)
-    song = Song.new 
-    @@all << song 
-    song.artist = self 
-  end 
-  
-  def artist_name
-    self.artist.name
-  end 
-  
-  def self.song_count
-    @@all.collect {|song| song.artist_name == self}
-  end 
 end 
