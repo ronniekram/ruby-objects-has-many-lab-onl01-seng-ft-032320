@@ -5,6 +5,16 @@ class Author
     @name = name 
   end
   
-  def posts 
+  def posts
+    Post.all.select {|p| p.name == self}
+  end 
+  
+  def add_post(title)
+  end 
+  
+  def add_post_by_name(title)
+  end 
+  
+  def self.post_count 
   end 
 end 
