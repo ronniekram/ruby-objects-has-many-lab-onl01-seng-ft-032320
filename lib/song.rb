@@ -1,25 +1,26 @@
 class Song 
-  attr_accessor :artist, :name 
+  attr_accessor :name, :artist
   @@all = []
   
-  #when creating a new song, it adds itself to the class variable of an array 
   def initialize(name)
-    @name = name
-    @@all << self 
+    @name = name 
+    save
   end 
- 
-   #returns the array of the class variable 
-  def self.all 
+  
+  def save
+    @@all << self
+  end
+
+  def self.all
     @@all 
   end 
   
-  # the name of the artist is self.artist.name
   def artist_name
-    if self.artist
+    if self.artist == nil 
+      nil 
+    else 
       self.artist.name
-    else
-      nil
-    end
+    end 
   end 
   
 end 
