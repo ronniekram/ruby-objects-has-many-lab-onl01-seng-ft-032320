@@ -7,6 +7,10 @@ class Song
     @artist = artist 
   end 
   
+  def new 
+    @@all << self 
+  end 
+  
   def self.all
     @@all 
   end 
