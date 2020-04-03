@@ -6,7 +6,7 @@ class Artist
   end 
   
   def songs 
-    
+    Song.all.collect {|songs| songs.artist_name == self}
   end 
   
   def add_song(song)
@@ -18,5 +18,6 @@ class Artist
   end
   
   def self.song_count 
+    songs.count
   end 
 end 
