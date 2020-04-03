@@ -18,6 +18,6 @@ class Song
   end 
   
   def self.song_count
-    @@all.length
+    @@all.collect {|song| song.artist_name == self}
   end 
 end 
